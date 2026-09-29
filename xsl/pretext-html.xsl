@@ -6410,6 +6410,12 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             <xsl:text> margin-right: </xsl:text>
             <xsl:value-of select="$layout/right-margin"/>
             <xsl:text>%;</xsl:text>
+            <!-- same, for CSS to size a long description -->
+            <xsl:text> --ptx-image-box-width: </xsl:text>
+            <xsl:value-of select="$layout/width"/>
+            <xsl:text>; --ptx-image-box-left: </xsl:text>
+            <xsl:value-of select="$layout/left-margin"/>
+            <xsl:text>;</xsl:text>
         </xsl:attribute>
         <xsl:apply-templates select="." mode="image-inclusion"/>
     </div>
