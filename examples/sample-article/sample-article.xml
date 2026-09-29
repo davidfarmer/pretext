@@ -3696,6 +3696,29 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                     </image>
                 </figure>
 
+                <p>A long description is not constrained by the width of its image.  In <init>HTML</init> and <init>EPUB</init> output a revealed description spans <m>80\%</m> of the available width, centered, whether the image is narrow or wide, and whether the image is centered or not.  (Within a panel of a <c>sidebyside</c> the description fills the panel instead.)  The two figures below are narrow versions of the previous image, first centered, then pushed to the left by its margins.</p>
+
+                <figure xml:id="figure-complete-graph-narrow">
+                    <caption>A narrow complete graph, with a long description</caption>
+                    <image source="images/complete-graph" width="20%">
+                        <description>
+                            <p>A circular arrangement of <m>16</m> dots (<term>vertices</term>), evenly spaced like the hours on a clock face with four extra hours.  Every pair of dots is joined by a straight line segment (an <term>edge</term>), so there are <m>\binom{16}{2}=120</m> edges in all.</p>
+                            <p>Edges between neighboring dots trace out the perimeter of a regular <m>16</m>-sided polygon.  Edges between dots that are further apart cut across the interior, and the longest edges pass through, or very near, the center of the circle.</p>
+                            <p>So many edges cross each other that the interior becomes a dense web of lines, darkest near the center, where the most edges overlap, and lighter toward the perimeter.</p>
+                        </description>
+                    </image>
+                </figure>
+
+                <figure xml:id="figure-complete-graph-narrow-left">
+                    <caption>A narrow complete graph, off-center, with a long description</caption>
+                    <image source="images/complete-graph" width="20%" margins="5% 75%">
+                        <description>
+                            <p>The same complete graph on <m>16</m> vertices as the previous figure, now placed near the left margin of the text.  Its description is still centered on the text, and not on the image.</p>
+                            <p>A circular arrangement of <m>16</m> dots, with a straight line segment joining every pair of dots, for a total of <m>120</m> line segments.</p>
+                        </description>
+                    </image>
+                </figure>
+
                 <remark>
                     <title>Footnote Buried</title>
 
