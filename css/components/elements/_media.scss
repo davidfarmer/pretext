@@ -62,6 +62,25 @@ img.contained {
     list-style: none; // no marker
     cursor: pointer;
   }
+
+  // A revealed description spans 80% of the width available where its
+  // image, or interactive, sits, centered, whatever the width or placement
+  // of the image.  The description lives inside its host box, and an
+  // .image-box reports its own width and left margin, as numbers that are
+  // percentages of the available width.  Percentages here are of the host
+  // box.  With no report (an interactive, an EPUB image) the host spans
+  // the available width.
+  & > div {
+    width: calc(80% * 100 / var(--ptx-image-box-width, 100));
+    margin-left: calc((10% - 1% * var(--ptx-image-box-left, 0)) * 100 / var(--ptx-image-box-width, 100));
+  }
+}
+
+// In a panel of a sidebyside a description fills the panel
+:is(.sbspanel, .sbspanel > figure) > :is(.image-box, .interactive-iframe-container) > .image-description > div,
+:is(.sbspanel, .sbspanel > figure) > .image-description > div {
+  width: auto;
+  margin-left: 0;
 }
 
 // download links after an image
